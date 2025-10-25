@@ -23,6 +23,6 @@ spec:
       
       containers:
         - name: front-container
-          image: blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app:latest
+          image: blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app:de640fd94354a069009abe7308826dcbff882afe
           ports:
             - containerPort: 80
