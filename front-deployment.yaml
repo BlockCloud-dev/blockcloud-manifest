@@ -13,9 +13,12 @@ spec:
     metadata:
       labels:
         app: front-app
-    spec:
+    spec:      
+      nodeSelector:
+        app-pool: front-back-nodes 
+      
       containers:
         - name: front-container
-          image: blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app:latest 
+          image: blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app:latest
           ports:
             - containerPort: 80
