@@ -23,6 +23,6 @@ spec:
       
       containers:
         - name: back-container
-          image: blockcloud.kr.ncr.ntruss.com/blockcloud/backend-app:latest
+          image: blockcloud.kr.ncr.ntruss.com/blockcloud/backend-app:bdeef8fbf90d50f1087a697ebdb5a4047ab7a8a1
           ports:
             - containerPort: 8080
