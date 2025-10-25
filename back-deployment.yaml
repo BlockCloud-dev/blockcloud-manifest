@@ -14,6 +14,9 @@ spec:
       labels:
         app: back-app
     spec:
+      imagePullSecrets:
+        - name: ncr-registry-secret
+      
       nodeSelector:
         app-pool: front-back-nodes
       
