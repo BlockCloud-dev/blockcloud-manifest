@@ -13,9 +13,12 @@ spec:
     metadata:
       labels:
         app: front-app
-    spec:      
+    spec:
+      imagePullSecrets:
+        - name: ncr-registry-secret
+        
       nodeSelector:
-        app-pool: front-back-nodes 
+        app-pool: front-back-nodes
       
       containers:
         - name: front-container
