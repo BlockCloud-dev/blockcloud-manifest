@@ -4,6 +4,7 @@ metadata:
   name: app-traffic-router
   annotations:
     kubernetes.io/ingress.class: "nginx" # NKS Ingress Controller 지정
+  namespace: default
 spec:
   rules:
     - host: "blockcloud.dev"
