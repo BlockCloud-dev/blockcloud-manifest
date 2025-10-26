@@ -22,6 +22,6 @@ spec:
       containers:
         - name: front-container
           # Image Updater가 이 태그(de640f...)를 최신 태그로 업데이트합니다.
-          image: blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app:79359e51ef023e7a0c9bb1d9b1f1c2f0435f4e90
+          image: blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app:6a3d6b1ade67edb27bbc79af1189beb24be3b870
           ports:
             - containerPort: 80
