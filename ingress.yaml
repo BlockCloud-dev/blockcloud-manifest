@@ -31,6 +31,13 @@ spec:
               service:
                 name: back-service
                 port:
+                  number: 8080                  
+          - path: /oauth2/authorization
+            pathType: Prefix
+            backend:
+              service:
+                name: back-service
+                port:
                   number: 8080
           - path: /
             pathType: Prefix
