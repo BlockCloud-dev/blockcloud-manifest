@@ -29,6 +29,6 @@ spec:
       containers:
         - name: back-container
           # Image Updater가 이 태그(bdeef8...)를 최신 태그로 업데이트합니다.
-          image: blockcloud.kr.ncr.ntruss.com/blockcloud/backend-app:36c338763c93b2338c897b04beea7878f3261513
+          image: blockcloud.kr.ncr.ntruss.com/blockcloud/backend-app:eae69bc7a142fe14934b2047d2188de829ee425b
           ports:
             - containerPort: 8080
