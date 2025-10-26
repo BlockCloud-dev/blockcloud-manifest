@@ -5,6 +5,11 @@ metadata:
   labels:
     app: front-app
   namespace: default
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: frontend-app=blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app
+    argocd-image-updater.argoproj.io/frontend-app.update-strategy: latest
+    argocd-image-updater.argoproj.io/frontend-app.allow-tags: 'regexp:^[0-9a-f]{7,40}$'
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   replicas: 2
   selector:
@@ -17,12 +22,13 @@ spec:
     spec:
       imagePullSecrets:
         - name: ncr-registry-secret
-        
+      
       nodeSelector:
         app-pool: front-back-nodes
       
       containers:
         - name: front-container
+          # Image Updater가 이 태그(de640f...)를 최신 태그로 업데이트합니다.
           image: blockcloud.kr.ncr.ntruss.com/blockcloud/frontend-app:de640fd94354a069009abe7308826dcbff882afe
           ports:
             - containerPort: 80
