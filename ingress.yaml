@@ -18,15 +18,15 @@ spec:
                 name: back-service
                 port:
                   number: 8080
-          - path: /token
+          - path: /token/refresh
             pathType: Exact
             backend:
               service:
                 name: back-service
                 port:
                   number: 8080
-          - path: /login/oauth2
-            pathType: Prefix
+          - path: /login/oauth2/code/google
+            pathType: Exact
             backend:
               service:
                 name: back-service
