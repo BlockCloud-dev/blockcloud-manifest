@@ -24,13 +24,11 @@ spec:
     spec:
       imagePullSecrets:
         - name: ncr-registry-secret
-      
       nodeSelector:
         app-pool: front-back-nodes
-      
       containers:
         - name: back-container
           # Image Updater가 이 태그(bdeef8...)를 최신 태그로 업데이트합니다.
-          image: blockcloud.kr.ncr.ntruss.com/blockcloud/backend-app:1879fdbef729e32cd4ca003912cda3de86a43ce6
+          image: blockcloud.kr.ncr.ntruss.com/blockcloud/backend-app:5d0511b07fa4ef8fab9e01caea5fbaa52682c38d
           ports:
             - containerPort: 8080
