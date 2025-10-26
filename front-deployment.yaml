@@ -10,6 +10,8 @@ metadata:
     argocd-image-updater.argoproj.io/frontend-app.update-strategy: latest
     argocd-image-updater.argoproj.io/frontend-app.allow-tags: 'regexp:^[0-9a-f]{7,40}$'
     argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/backend-app.pullsecret: ncr-image-pull-secret
+    argocd-image-updater.argoproj.io/git-login-secret: argocd-git-secret
 spec:
   replicas: 2
   selector:
